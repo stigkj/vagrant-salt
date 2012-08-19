@@ -12,6 +12,7 @@ Vagrant::Config.run do |config|
     master_config.vm.host_name = "master.example.com"
     # Configure the box
     master_config.vm.box = "oneiric-salt096"
+    master_config.vm.box_url = "http://dl.dropbox.com/u/3256948/oneiric-salt096.box"
     # Setup the network
     master_config.vm.network :hostonly, "192.168.1.10"
     # Setup the script provisioner
@@ -24,6 +25,7 @@ Vagrant::Config.run do |config|
     minion_config.vm.host_name = "minion.example.com"
     # Configure the box
     minion_config.vm.box = "oneiric-salt096"
+    minion_config.vm.box_url = "http://dl.dropbox.com/u/3256948/oneiric-salt096.box"
     # Setup the network
     minion_config.vm.network :hostonly, "192.168.1.11"
     # Setup the script provisioner
